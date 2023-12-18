@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fafbfc;
+}
+/* START: General styles */
+
+@layer utilities {
+  .btn_white {
+    @apply border-white bg-white px-8 py-3 text-green-50;
+  }
+  .btn_white_text {
+    @apply border-white bg-white px-8 py-2 text-gray-90 shadow-xl hover:shadow-green-100;
+  }
+  .btn_green {
+    @apply border-green-50 bg-green-50 px-8 py-3 text-white hover:bg-black-100;
+  }
+  .btn_dark_green {
+    @apply bg-green-90 px-8 py-3 text-white transition-all hover:bg-green-600 hover:shadow-gray-30;
+  }
+  .btn_dark_green_outline {
+    @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
+  }
+
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-0;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  .custom-btn {
+    @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  }
+  .home__filters {
+    @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
+  }
+}
+/* END: General styles */
+
+/* START: Hero styles */
+
+.bold-40 {
+  @apply text-[40px] font-[700] leading-[120%];
+}
+
+.bold-52 {
+  @apply text-[45px] font-[700] leading-[120%];
+}
+.hero__image {
+  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /*IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Forms */
+
+.form {
+  @apply text-slate-500 flex flex-col gap-5;
+}
+
+.form label {
+  @apply text-xs font-medium;
+}
+
+.form input,
+select,
+textarea {
+  @apply border-[1px] border-slate-400 font-normal rounded-lg px-2 py-3;
+}
+
+.form button {
+  @apply btn;
+}
+
+.btn {
+  @apply flex justify-center items-center text-white  py-3 px-4 font-semibold text-base rounded-md transition-all;
+}
+
+/* MD editor styles */
+
+.w-md-editor-text-input,
+.w-md-editor-text-pre > code,
+.w-md-editor-text-pre {
+  font-family: "Poppins" !important;
+  --md-editor-font-family: "Poppins" !important;
+}

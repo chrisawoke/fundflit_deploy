@@ -1,0 +1,23 @@
+{
+  "protocol": "http://test3",
+  "published": true,
+  "types": {
+    "campaign": {
+      "dataFormats": ["application/json"]
+    }
+  },
+  "structure": {
+    "campaign": {
+      "$actions": [
+        {
+          "who": "anyone",
+          "can": "read"
+        },
+        {
+          "who": "anyone",
+          "can": "write"
+        }
+      ]
+    }
+  }
+}
